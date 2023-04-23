@@ -1,0 +1,42 @@
+[
+    {
+       "id":1,
+       "prompt":"You wake up in a dimly lit bedroom on the second level of an old tavern. Your head is pounding and your memory is foggy. You sit up and notice a note on the table next to you. The note reads…Welcome to the Eastern Mountain Pass Tavern. We found you outside on the road and brought you inside last night. Your belongings can be found downstairs. You look around and the tavern is empty except for the bartender, who is polishing a glass behind the bar. You have two options:",
+       "options":{
+             "prompt1":"Ask the bartender for information about the town",
+             "prompt2":"Head to the back of the tavern to retrieve your belongings"
+      }
+    },
+    {
+       "id":2,
+       "prompt":"This is level 2",
+       "options":{
+             "prompt1":"(b) to backoff",
+             "prompt2":"(c) to chase"
+         }
+    },
+    {
+       "id":3,
+       "prompt":"This is level 3",
+       "options":{
+             "prompt1":"(t) to tell him off",
+             "prompt2":"(w) to walk away"
+          }
+    },
+    {
+       "id":4,
+       "prompt":"This is level 4",
+       "options":{
+             "prompt1":"(q) to shoot",
+             "prompt2":"(u) to stab"
+          }
+    },
+    {
+       "id":5,
+       "prompt":"This is level 5",
+       "options":{
+             "prompt1":"(p) to punch",
+             "prompt2":"(k) to kick"
+          }
+    }
+ ]

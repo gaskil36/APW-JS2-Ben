@@ -1,0 +1,55 @@
+<!---added HTML doctype in a testing attempt, site still works fine and gives more structure to help test.-->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!---<link rel="stylesheet" type="text/css"   href="/stylesheets/style.css"> stylesheets wont load, need to fix, for now embedded--->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <title>FABA The Game</title>
+   </head>
+   <body style="background-image: url(https://i.pinimg.com/originals/d5/60/44/d56044a5b5f62df707da4823ee84b2f4.jpg); align-content: center;" >
+      <img id="gameImage" src="https://www.gamespot.com/a/uploads/original/536/5360430/3060670-the_witcher_3_wild_hunt_blood_and_wine_toussaint_is_full_of_places_just_waiting_to_be_discovered_rgb.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 40%;"></img>
+      <h1 style="position: relative; left: 815px; text-align: center; border: 3px solid green; width: 13%;">FABA The Game</h1>
+      <h2 style="position: relative; left: 795px; text-align: left; background-color: lightsteelblue; width: 15%">Welcome to FABA, <%= user %> </h2>
+      <h3 style="position: relative; left: 470px; background-color: lightsteelblue; width:50%" name="sceneText" id="sceneText" style="text-align: center;">Prompt: <%= title %></h3>
+      <div style="text-align: center; height: 40vh;">
+         <button name="prompt1" id="prompt1" style="background-color: blanchedalmond; margin: auto; width: 50%; border: 3px solid green; padding: 20px 0; text-align: center;" onclick="progressGame();"><%= prompt1 %></button>
+         <button name="prompt2" id="prompt2" style="background-color: blanchedalmond; margin: auto; width: 50%; border: 3px solid green; padding: 20px 0; text-align: center;" onclick="progressGame();"><%= prompt2 %></button>
+      </div>
+      <script>
+
+      //    var clicked1 = false
+
+      //    $("#prompt1").on('click', funcion(){t
+      //    clicked1 = true
+      //    })
+
+      //   if(clicked1 = true){
+      //    alert("You have selected option1")
+      //   }
+
+      var clicked1 = false
+      var clicked2 = false
+      $("#prompt1").on('click', function(){ clicked1 = true})
+      $("#prompt2").on('click', function(){ clicked2 = true})
+
+        async function progressGame(){
+            if(clicked1 === true){
+                document.getElementById("prompt1").innerHTML="<%= prompt11 %>";
+                document.getElementById("sceneText").innerHTML="<%= title1 %>";
+                document.getElementById("prompt2").innerHTML="<%= prompt12 %>";
+                document.getElementById("gameImage").src="https://www.oxpal.com/wp-content/uploads/2014/07/character_medieval_tavern_keeper_big.jpg";
+                clicked1 = false
+            } else if(clicked2 === true){
+                document.getElementById("prompt1").innerHTML="<%= prompt21 %>";
+                document.getElementById("sceneText").innerHTML="<%= title2 %>";
+                document.getElementById("prompt2").innerHTML="<%= prompt22 %>";
+                clicked2 = false
+            }
+         }
+      </script>
+      </div>
+   </body>
+</html>
